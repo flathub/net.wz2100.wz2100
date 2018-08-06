@@ -38,24 +38,6 @@ modules:
         url: 'http://icculus.org/physfs/downloads/physfs-3.0.1.tar.bz2'
         sha1: 9959a7acad0aa30d1a86d3a418e61155b0ac533c
       
-  - name: ffmpeg
-    config-opts:
-      - --disable-everything
-      - --enable-gpl
-      - --disable-static
-      - --enable-shared
-      - --disable-doc
-      - --disable-ffplay
-      - --disable-ffprobe
-    post-install:
-      - chrpath -d /app/bin/ffmpeg
-    cleanup:
-      - /share/ffmpeg/examples
-    sources:
-      - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.0.2.tar.xz
-        sha256: a95c0cc9eb990e94031d2183f2e6e444cc61c99f6f182d1575c433d62afb2f97
-        
   - name: fribidi
     config-opts:
     - --disable-docs
