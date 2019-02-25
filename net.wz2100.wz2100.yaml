@@ -8,7 +8,7 @@ finish-args:
   - --socket=wayland
   - --share=ipc
   - --socket=x11
-  - --device=dri
+  - --device=all
   - --persist=.warzone2100-3.2
   - --socket=pulseaudio
   - --share=network
