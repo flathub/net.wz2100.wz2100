@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
   <id>net.wz2100.wz2100</id>
+  <name>Warzone2100</name>
   <launchable type="desktop-id">net.wz2100.wz2100.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <summary>In Warzone 2100, you command the forces of The Project in a battle to rebuild the world after mankind has almost been destroyed by nuclear missiles.</summary>
@@ -24,7 +25,7 @@
   <url type="bugtracker">http://developer.wz2100.net/report/1</url>
   <url type="help">http://developer.wz2100.net/wiki/NewFAQ/</url>
   <releases>
-    <release version="3.2.3" date="2017-04-23"/>
+    <release version="3.3.0" date="2019-08-31"/>
   </releases>
   <content_rating type="oars-1.1">
     <content_attribute id="social-chat">intense</content_attribute>

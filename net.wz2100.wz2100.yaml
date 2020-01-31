@@ -1,6 +1,6 @@
 app-id: net.wz2100.wz2100
 runtime: org.kde.Platform
-runtime-version: '5.11'
+runtime-version: '5.13'
 sdk: org.kde.Sdk
 command: warzone2100
 separate-locales: false
@@ -9,7 +9,7 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --device=dri
-  - --persist=.warzone2100-3.2
+  - --persist=.warzone2100-3.3
   - --socket=pulseaudio
   - --share=network
 cleanup:
@@ -23,7 +23,7 @@ cleanup:
   - '*.la'
   
 modules:
-  - shared-modules/glu/glu-9.0.0.json
+  - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
         
   - name: physfs
@@ -35,8 +35,8 @@ modules:
     - -DPHYSFS_BUILD_TEST=OFF
     sources:
       - type: archive
-        url: 'http://icculus.org/physfs/downloads/physfs-3.0.1.tar.bz2'
-        sha1: 9959a7acad0aa30d1a86d3a418e61155b0ac533c
+        url: 'http://icculus.org/physfs/downloads/physfs-3.0.2.tar.bz2'
+        sha1: 6a15c458898d0570101d8f173201cde9ced78df7
       
   - name: fribidi
     config-opts:
@@ -44,16 +44,16 @@ modules:
     sources:
       - type: git
         url: https://github.com/fribidi/fribidi
-        tag: v1.0.5
-        commit: 5b6a16e8da12ae7ff482fbfa5a17b72bd518418f
+        tag: v1.0.7
+        commit: aac3845708969b9c4bc2874edc4950123595b1b4
       - type: patch
         path: disable-docs.patch
       
   - name: wz2100
     sources:
       - type: archive
-        url: http://downloads.sourceforge.net/project/warzone2100/releases/3.2.3/warzone2100-3.2.3.tar.xz
-        sha256: fcab9e860203e7dacda6ee60384da490a9d44aeafc07aa31ff25f9c548be7582
+        url: http://downloads.sourceforge.net/project/warzone2100/releases/3.3.0/warzone2100-3.3.0_src.tar.xz
+        sha256: cc48c8128d17a499e833996470d843855389d9fc985c71f05be08901f33116e8
       - type: file
         url: http://sourceforge.net/projects/warzone2100/files/warzone2100/Videos/high-quality-en/sequences.wz
         sha256: 90ff552ca4a70e2537e027e22c5098ea4ed1bc11bb7fc94138c6c941a73d29fa        
