@@ -44,18 +44,18 @@ modules:
     sources:
       - type: git
         url: https://github.com/fribidi/fribidi
-        tag: v1.0.7
-        commit: aac3845708969b9c4bc2874edc4950123595b1b4
+        tag: v1.0.8
+        commit: 2e9bd91cfd857c5b78a210d8f24862a4bb704059
       - type: patch
         path: disable-docs.patch
       
   - name: wz2100
     sources:
       - type: archive
-        url: http://downloads.sourceforge.net/project/warzone2100/releases/3.3.0/warzone2100-3.3.0_src.tar.xz
+        url: https://downloads.sourceforge.net/project/warzone2100/releases/3.3.0/warzone2100-3.3.0_src.tar.xz
         sha256: cc48c8128d17a499e833996470d843855389d9fc985c71f05be08901f33116e8
       - type: file
-        url: http://sourceforge.net/projects/warzone2100/files/warzone2100/Videos/high-quality-en/sequences.wz
+        url: https://sourceforge.net/projects/warzone2100/files/warzone2100/Videos/high-quality-en/sequences.wz
         sha256: 90ff552ca4a70e2537e027e22c5098ea4ed1bc11bb7fc94138c6c941a73d29fa        
       - type: file
         path: net.wz2100.wz2100.appdata.xml
