@@ -14,18 +14,18 @@
     Warzone 2100 was originally developed as a commercial game by Pumpkin Studios and published in 1999, and was released as open source by them in 2004, for the community to continue working on it.
     </p>
   </description>
-  <url type="homepage">http://wz2100.net/</url>
+  <url type="homepage">https://wz2100.net/</url>
   <screenshots>
     <screenshot type="default">
       <image>http://wz2100.net/static/img/wz2100-CAM_3A50.png</image>
     </screenshot>
   </screenshots>
   <project_license>GPL-2.0-or-later</project_license>
-  <developer_name>Warzone 2100 team</developer_name>
-  <url type="bugtracker">http://developer.wz2100.net/report/1</url>
-  <url type="help">http://developer.wz2100.net/wiki/NewFAQ/</url>
+  <developer_name>Warzone 2100 Project</developer_name>
+  <url type="bugtracker">https://github.com/Warzone2100/warzone2100/issues</url>
+  <url type="help">https://wz2100.net/#faq</url>
   <releases>
-    <release version="3.3.0" date="2019-08-31"/>
+    <release version="3.4.0" date="2020-06-24"/>
   </releases>
   <content_rating type="oars-1.1">
     <content_attribute id="social-chat">intense</content_attribute>

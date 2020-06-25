@@ -1,6 +1,6 @@
 app-id: net.wz2100.wz2100
 runtime: org.kde.Platform
-runtime-version: '5.13'
+runtime-version: '5.14'
 sdk: org.kde.Sdk
 command: warzone2100
 separate-locales: false
@@ -9,7 +9,7 @@ finish-args:
   - --share=ipc
   - --socket=x11
   - --device=dri
-  - --persist=.warzone2100-3.3
+  - --persist=.warzone2100-3.4
   - --socket=pulseaudio
   - --share=network
 cleanup:
@@ -25,7 +25,21 @@ cleanup:
 modules:
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
-        
+
+  - name: ruby
+    sources:
+      - type: archive
+        url: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.1.tar.gz
+        sha256: d418483bdd0000576c1370571121a6eb24582116db0b7bb2005e90e250eae418
+  - name: asciidoctor
+    buildsystem: simple
+    build-commands:
+      - gem install --local asciidoctor-2.0.10.gem
+    sources:
+        - type: file
+          url: https://rubygems.org/downloads/asciidoctor-2.0.10.gem
+          sha256: 7f3df92816f75344d36bb15e49a6fbc07ac0999a1cd2938fd0802ea587964aac
+
   - name: physfs
     buildsystem: cmake-ninja
     builddir: true
@@ -44,16 +58,26 @@ modules:
     sources:
       - type: git
         url: https://github.com/fribidi/fribidi
-        tag: v1.0.8
-        commit: 2e9bd91cfd857c5b78a210d8f24862a4bb704059
+        tag: v1.0.9
+        commit: f9e8e71a6fbf4a4619481284c9f484d10e559995
       - type: patch
         path: disable-docs.patch
-      
-  - name: wz2100
+
+  - name: libsodium
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/warzone2100/releases/3.3.0/warzone2100-3.3.0_src.tar.xz
-        sha256: cc48c8128d17a499e833996470d843855389d9fc985c71f05be08901f33116e8
+        url: https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz
+        sha256: 6f504490b342a4f8a4c4a02fc9b866cbef8622d5df4e5452b46be121e46636c1
+
+  - name: wz2100
+    buildsystem: "cmake"
+    builddir: true
+    config-opts:
+      - -DWZ_DISTRIBUTOR=Flathub
+    sources:
+      - type: archive
+        url: https://downloads.sourceforge.net/project/warzone2100/releases/3.4.0/warzone2100_src.tar.xz
+        sha256: fe0128b4fe590d29d6f03fc1bc72016448fdb282dd8d9f9fbb4403fe53e4983c
       - type: file
         url: https://sourceforge.net/projects/warzone2100/files/warzone2100/Videos/high-quality-en/sequences.wz
         sha256: 90ff552ca4a70e2537e027e22c5098ea4ed1bc11bb7fc94138c6c941a73d29fa        
@@ -62,9 +86,8 @@ modules:
     post-install:
       - mkdir -p /app/share/appdata
       - mkdir -p /app/share/icons/hicolor/128x128/apps
-      - install -Dm644 sequences.wz /app/share/warzone2100/sequences.wz
+      - install -Dm644 ../sequences.wz /app/share/warzone2100/sequences.wz
       - mv /app/share/applications/warzone2100.desktop /app/share/applications/net.wz2100.wz2100.desktop
       - mv /app/share/icons/warzone2100.png /app/share/icons/hicolor/128x128/apps/net.wz2100.wz2100.png
-      - install -Dm644 net.wz2100.wz2100.appdata.xml /app/share/appdata
+      - install -Dm644 ../net.wz2100.wz2100.appdata.xml /app/share/appdata
       - desktop-file-edit --set-key=Icon --set-value='net.wz2100.wz2100' /app/share/applications/net.wz2100.wz2100.desktop
-
