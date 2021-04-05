@@ -29,16 +29,16 @@ modules:
   - name: ruby
     sources:
       - type: archive
-        url: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.1.tar.gz
-        sha256: d418483bdd0000576c1370571121a6eb24582116db0b7bb2005e90e250eae418
+        url: https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.0.tar.xz
+        sha256: 68bfaeef027b6ccd0032504a68ae69721a70e97d921ff328c0c8836c798f6cb1
   - name: asciidoctor
     buildsystem: simple
     build-commands:
-      - gem install --local asciidoctor-2.0.10.gem
+      - gem install --local asciidoctor-2.0.12.gem
     sources:
         - type: file
-          url: https://rubygems.org/downloads/asciidoctor-2.0.10.gem
-          sha256: 7f3df92816f75344d36bb15e49a6fbc07ac0999a1cd2938fd0802ea587964aac
+          url: https://rubygems.org/downloads/asciidoctor-2.0.12.gem
+          sha256: 494eed109fd2160f0f974cd96d2ad34fa71f86e016e30e3af917f03dd04e53be
 
   - name: physfs
     buildsystem: cmake-ninja
@@ -58,8 +58,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fribidi/fribidi
-        tag: v1.0.9
-        commit: f9e8e71a6fbf4a4619481284c9f484d10e559995
+        tag: v1.0.10
+        commit: 5464c284034da9c058269377b7f5013bb089f553
       - type: patch
         path: disable-docs.patch
 
