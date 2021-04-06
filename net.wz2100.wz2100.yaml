@@ -1,6 +1,6 @@
 app-id: net.wz2100.wz2100
 runtime: org.kde.Platform
-runtime-version: '5.14'
+runtime-version: '5.15'
 sdk: org.kde.Sdk
 command: warzone2100
 separate-locales: false
