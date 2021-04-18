@@ -25,7 +25,7 @@
   <url type="bugtracker">https://github.com/Warzone2100/warzone2100/issues</url>
   <url type="help">https://wz2100.net/#faq</url>
   <releases>
-    <release version="4.0.0" date="2021-04-04"/>
+    <release version="4.0.1" date="2021-04-18"/>
   </releases>
   <content_rating type="oars-1.1">
     <content_attribute id="social-chat">intense</content_attribute>
