@@ -76,8 +76,8 @@ modules:
       - -DWZ_DISTRIBUTOR=Flathub
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/warzone2100/releases/4.1.0/warzone2100_src.tar.xz
-        sha256: 1d096986880ada38d35d5edc43c9453568c73019e94adcaf4f7c0a623943416d
+        url: https://github.com/Warzone2100/warzone2100/releases/download/4.1.3/warzone2100_src.tar.xz
+        sha256: b0a6620e35b05455d3e91898fb34fed12e996f7b820b409a6733906045a958db
       - type: file
         url: https://sourceforge.net/projects/warzone2100/files/warzone2100/Videos/high-quality-en/sequences.wz
         sha256: 90ff552ca4a70e2537e027e22c5098ea4ed1bc11bb7fc94138c6c941a73d29fa        
