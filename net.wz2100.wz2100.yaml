@@ -29,16 +29,16 @@ modules:
   - name: ruby
     sources:
       - type: archive
-        url: https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.0.tar.xz
-        sha256: 68bfaeef027b6ccd0032504a68ae69721a70e97d921ff328c0c8836c798f6cb1
+        url: https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.2.tar.gz
+        sha256: 5085dee0ad9f06996a8acec7ebea4a8735e6fac22f22e2d98c3f2bc3bef7e6f1
   - name: asciidoctor
     buildsystem: simple
     build-commands:
-      - gem install --local asciidoctor-2.0.12.gem
+      - gem install --local asciidoctor-2.0.16.gem
     sources:
         - type: file
-          url: https://rubygems.org/downloads/asciidoctor-2.0.12.gem
-          sha256: 494eed109fd2160f0f974cd96d2ad34fa71f86e016e30e3af917f03dd04e53be
+          url: https://rubygems.org/downloads/asciidoctor-2.0.16.gem
+          sha256: 02439a5b89b25550297a21c631035c2a6608d6fc9d9b63d7f137b3356bbd0482
 
   - name: physfs
     buildsystem: cmake-ninja
@@ -58,8 +58,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fribidi/fribidi
-        tag: v1.0.10
-        commit: 5464c284034da9c058269377b7f5013bb089f553
+        tag: v1.0.11
+        commit: 247fddc3599e3fe7b1b5cc21020c9eb51e662637
       - type: patch
         path: disable-docs.patch
 
@@ -76,8 +76,8 @@ modules:
       - -DWZ_DISTRIBUTOR=Flathub
     sources:
       - type: archive
-        url: https://github.com/Warzone2100/warzone2100/releases/download/4.1.3/warzone2100_src.tar.xz
-        sha256: b0a6620e35b05455d3e91898fb34fed12e996f7b820b409a6733906045a958db
+        url: https://github.com/Warzone2100/warzone2100/releases/download/4.2.0/warzone2100_src.tar.xz
+        sha256: d4cefbcee02aba77c08cad89beed3c67b8a708c741617f76026c8c0fd79ab9ef
       - type: file
         url: https://sourceforge.net/projects/warzone2100/files/warzone2100/Videos/high-quality-en/sequences.wz
         sha256: 90ff552ca4a70e2537e027e22c5098ea4ed1bc11bb7fc94138c6c941a73d29fa        
