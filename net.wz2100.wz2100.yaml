@@ -4,7 +4,7 @@ runtime-version: '6.2'
 sdk: org.kde.Sdk
 command: warzone2100
 separate-locales: false
-finish-args: 
+finish-args:
   - --socket=wayland
   - --share=ipc
   - --socket=x11
@@ -21,7 +21,7 @@ cleanup:
   - /share/pkgconfig
   - '*.a'
   - '*.la'
-  
+
 modules:
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
@@ -51,7 +51,7 @@ modules:
       - type: archive
         url: 'http://icculus.org/physfs/downloads/physfs-3.0.2.tar.bz2'
         sha1: 6a15c458898d0570101d8f173201cde9ced78df7
-      
+
   - name: fribidi
     config-opts:
     - --disable-docs
@@ -76,18 +76,18 @@ modules:
       - -DWZ_DISTRIBUTOR=Flathub
     sources:
       - type: archive
-        url: https://github.com/Warzone2100/warzone2100/releases/download/4.2.7/warzone2100_src.tar.xz
-        sha256: 7f527ce00eda44099b1a7e3c303ede276f835f6d6ad945b0600a175ddabb00b0
+        url: https://github.com/Warzone2100/warzone2100/releases/download/4.3.2/warzone2100_src.tar.xz
+        sha256: 45ca4793ea7d01dbbdce4776279e21b297a8959affc6c06c63c7941cb198d31c
       - type: file
         url: https://sourceforge.net/projects/warzone2100/files/warzone2100/Videos/high-quality-en/sequences.wz
-        sha256: 90ff552ca4a70e2537e027e22c5098ea4ed1bc11bb7fc94138c6c941a73d29fa        
+        sha256: 90ff552ca4a70e2537e027e22c5098ea4ed1bc11bb7fc94138c6c941a73d29fa
       - type: file
         path: net.wz2100.wz2100.appdata.xml
     post-install:
       - mkdir -p /app/share/appdata
       - mkdir -p /app/share/icons/hicolor/128x128/apps
       - install -Dm644 ../sequences.wz /app/share/warzone2100/sequences.wz
-      - mv /app/share/applications/warzone2100.desktop /app/share/applications/net.wz2100.wz2100.desktop
-      - mv /app/share/icons/warzone2100.png /app/share/icons/hicolor/128x128/apps/net.wz2100.wz2100.png
+      - mv /app/share/applications/net.wz2100.warzone2100.desktop /app/share/applications/net.wz2100.wz2100.desktop
+      - mv /app/share/icons/net.wz2100.warzone2100.png /app/share/icons/hicolor/128x128/apps/net.wz2100.wz2100.png
       - install -Dm644 ../net.wz2100.wz2100.appdata.xml /app/share/appdata
       - desktop-file-edit --set-key=Icon --set-value='net.wz2100.wz2100' /app/share/applications/net.wz2100.wz2100.desktop
