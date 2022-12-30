@@ -1,6 +1,6 @@
 app-id: net.wz2100.wz2100
 runtime: org.kde.Platform
-runtime-version: '6.2'
+runtime-version: '6.4'
 sdk: org.kde.Sdk
 command: warzone2100
 separate-locales: false
@@ -29,16 +29,16 @@ modules:
   - name: ruby
     sources:
       - type: archive
-        url: https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.2.tar.gz
-        sha256: 5085dee0ad9f06996a8acec7ebea4a8735e6fac22f22e2d98c3f2bc3bef7e6f1
+        url: https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.0.tar.gz
+        sha256: daaa78e1360b2783f98deeceb677ad900f3a36c0ffa6e2b6b19090be77abc272
   - name: asciidoctor
     buildsystem: simple
     build-commands:
-      - gem install --local asciidoctor-2.0.16.gem
+      - gem install --local asciidoctor-2.0.18.gem
     sources:
         - type: file
-          url: https://rubygems.org/downloads/asciidoctor-2.0.16.gem
-          sha256: 02439a5b89b25550297a21c631035c2a6608d6fc9d9b63d7f137b3356bbd0482
+          url: https://rubygems.org/downloads/asciidoctor-2.0.18.gem
+          sha256: bbd1e1d16deed8db94bf9624b9f4474fac32d9ca7225d377f076c08d9adde387
 
   - name: physfs
     buildsystem: cmake-ninja
@@ -58,8 +58,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fribidi/fribidi
-        tag: v1.0.11
-        commit: 247fddc3599e3fe7b1b5cc21020c9eb51e662637
+        tag: v1.0.12
+        commit: 6428d8469e536bcbb6e12c7b79ba6659371c435a
       - type: patch
         path: disable-docs.patch
 
